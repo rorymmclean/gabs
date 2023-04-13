@@ -18,7 +18,9 @@ const Header = (props) => {
   
   style={{
    
-    backgroundColor:"#000"
+    backgroundColor:"#000",
+    position:"fixed",
+    width:"100%"
   }}
   >
 
@@ -63,6 +65,8 @@ style={{
         loading? <div
           style={{
             marginLeft:"auto",
+            marginTop:"auto",
+            marginBottom:"auto"
           }}
           >
              <Spinner animation="border" role="status" variant="primary">

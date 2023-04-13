@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const Message = (props) => {
     const {Message,index}=props
+    useEffect(()=>{
+      window.scrollTo(0, document.body.scrollHeight);
+
+    },[])
   return (
     <div
     style={{

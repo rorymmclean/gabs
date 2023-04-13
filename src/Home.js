@@ -13,6 +13,12 @@ const [projects,setProjects]=useState([])
 const [selectedProject,setSelectedProject]=useState(0)
 const [loading,setLoading]=useState(false)
 
+
+useEffect(()=>{
+
+},[Messages])
+
+
 function handleKeyPress(event) {
   if (event.key === "Enter" && !loading) {
     var msgs=Messages
@@ -22,6 +28,7 @@ function handleKeyPress(event) {
 })
     SetMessages(msgs);
 
+    
 
     handleQuestion(InputMessage)
     setInputMessage("")
@@ -68,7 +75,10 @@ function StandardQuestions(){
         else{
           alert(decodedValue)
         }
+
          setLoading(false)
+         
+
           readStream();
         });
       }
@@ -79,6 +89,7 @@ function StandardQuestions(){
   }
 
 function handleQuestion(message){
+
 setLoading(true)
 
   const filteredData = projects.filter(item => item.ID === selectedProject);
@@ -128,6 +139,7 @@ setLoading(true)
         alert(decodedValue)
       }
       setLoading(false)
+      
 
         readStream();
       });
@@ -173,22 +185,27 @@ useEffect(()=>{
                 return(<Message Message={item} index={index}/>)
             })
         }
-          
-      </div>
-      {
+             {
         loading&&( <div
           style={{
             marginLeft:"auto",
             marginRight:"auto",
-            marginTop:20
+            marginTop:20,
+            width:0
           }}
           >
-             <Spinner animation="border" role="status" variant="primary">
+             <Spinner animation="border" role="status" variant="primary" style={{
+               marginLeft:"auto",
+               marginRight:"auto",
+               marginTop:20
+             }}>
               <span className="sr-only">Loading...</span>
             </Spinner>
           </div>)
       }
      
+      </div>
+   
      
       <div className="chat-input">
         <div
@@ -236,6 +253,7 @@ onClick={()=>{
 
     handleQuestion(InputMessage)
     setInputMessage("")
+    
 
 
 }}
