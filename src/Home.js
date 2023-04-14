@@ -182,7 +182,7 @@ useEffect(()=>{
         {
             Messages.map((item,index)=>{
 
-                return(<Message Message={item} index={index}/>)
+                return(<Message key={index} Message={item} index={index}/>)
             })
         }
              {

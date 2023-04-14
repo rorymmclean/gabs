@@ -53,7 +53,7 @@ style={{
         {
             projects.map((item,index)=>{
                 return (
-                    <option value={item.ID}>{item.short_name}</option>
+                    <option key={index} value={item.ID}>{item.short_name}</option>
 
                 )
             })

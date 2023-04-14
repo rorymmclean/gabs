@@ -36,7 +36,7 @@ style={{
 >
 
 </div>
-<p
+<div
 style={{
     color:"#fff",
     marginTop:"auto",
@@ -45,7 +45,7 @@ style={{
 }}
 >
     {Message.text}
-</p>
+</div>
 
    </div>
     </div>
