@@ -44,7 +44,8 @@ style={{
     width:"90%"
 }}
 >
-    {Message.text}
+<div dangerouslySetInnerHTML={{ __html: Message.text }}></div>
+
 </div>
 
    </div>
